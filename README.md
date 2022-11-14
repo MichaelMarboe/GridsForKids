@@ -24,7 +24,4 @@ JS/jQuery is utilised to control the animations. It's fully automated, and the s
 7. cycle ends
 8. new cycle begins
 
-**Code**
-
-
-**animationControl.js**
+More to come...
