@@ -1,0 +1,74 @@
+/* --- COLORS --- */
+
+.blue{
+    background-color: #45aaf2;
+}
+
+.purple{
+    background-color: #8963aa;
+}
+
+.red{
+    background-color: #e74c3c;
+}
+
+.orange{
+    background-color: #fd9644;
+}
+
+.green{
+    background-color: #20bf6b;
+}
+
+.yellow{
+    background-color: #f1c40f;
+}
+
+.bluegray{
+    background-color: #778CA3;
+}
+
+#container{
+    width:100%;
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.container-child{
+    background-color: red;
+    margin:10px;
+}
+
+#item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#item2{
+    grid-column-start: 3;
+    grid-row-start:1;
+    grid-row-end:3;
+}
+
+#item4{
+    grid-row-start: 2;
+    grid-row-end:4;
+}
+
+#item7{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#item8{
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+#item11{
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start:3;
+    grid-column-end:5;
+}

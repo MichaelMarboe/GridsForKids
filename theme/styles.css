@@ -1,0 +1,98 @@
+/* --- Reloads: Elements that are readded in JS because they must be exempt from initial DOM load. --- */
+
+#sticky-container {
+    display:none;
+}
+
+/* --- Home button --- */
+
+#homeButton {
+    width: 156px;
+    height: 50px;
+    cursor:pointer;
+}
+
+/* Moves home button to same position top as main-content */
+#left-side {
+    padding-top:18px;
+}
+
+.pages.show.home .show-content {
+    padding-top: 0px;
+}
+
+#homeButton:hover {
+    opacity: 0.5;
+}
+
+/* --- Next/Previous button styling */
+
+.homemadeButtons {
+    width: 13%;
+    display: block;
+}
+
+.homemadeButtons:hover{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+#nextButton {
+    float:right;
+}
+
+#prevButton {
+    float: left;
+}
+
+/* 
+
+--- Removed elements ALL ROLES --- 
+
+1. #course_show_secondary = Right-side menu in student view - NOT same as right-side-wrapper.
+
+*/
+
+#course_show_secondary{
+    display:none;
+}
+
+/*
+
+--- Removed for STUDENT ROLE ---
+
+To do (needs role conditional function in JS)
+
+1. Right side menu
+2. Left side menu
+3. Top menu
+
+EVERYTHING here must be added back on document ready in JS if admin is true.
+
+*/
+
+div[role="alert"] {
+    display:none;
+}
+
+.addMe{
+    opacity: 0;
+}
+
+.module-sequence-footer-button--next{
+    display:none;
+}
+
+.module-sequence-footer-button--previous{
+    display:none;
+}
+
+.header-bar-outer-container{
+    display:none;
+}
+
+/* --- REMOVED FOR ALL ROLES --- */
+
+.ic-app-nav-toggle-and-crumbs{
+    display:none;
+}
