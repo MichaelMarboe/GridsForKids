@@ -2,10 +2,10 @@
 
 GridsForKids is an animated and automated grid design that creates a living and fun landing page for an online kids website. Each grid element links to another subpage with content in the category. 
 
-**Stack**
+**Stack:**
 HTML, CSS, JS, jQuery, After Effects, Lottie Player.
 
-**Animation**
+**Animation:**
 Animations were developed in After Effects based on edited stock vector graphics, formatted for the web using the Lottie Player plug-in for After Effects. Because they are vector-based, the animations can scale infinitely without any quality loss or pixelation. They run smoothly on any modern device (albeit my testing options were severely limited). 
 
 In the demo, all animations are of identical length and use only 3 size formats, 300x300, 300x600 or 600x300. Content-wise, they all end the exact same way as they start and so can be looped infinitely without any jittering or apparent frame jumps.
