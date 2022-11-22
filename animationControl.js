@@ -24,6 +24,7 @@ let intervalPlayId;
 let devModeEnabled = false;
 let devButton = document.getElementById("devModeButton");
 
+// Call me from browser console
 const toggleDevMode = () => {
     if (devModeEnabled == false){
         document.getElementById("devTools").style.display = "block";
@@ -36,6 +37,7 @@ const toggleDevMode = () => {
     } 
 }
 
+// Stops all animations and enables playOnClick function to be possible on each animation
 const stopAnimation = () => {
     for (let i = 0; i < buttons.length; i++){
         buttons[i].stop();
