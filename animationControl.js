@@ -25,11 +25,18 @@ let devModeEnabled = false;
 let devButton = document.getElementById("devModeButton");
 
 const toggleDevMode = () => {
-    if (!devModeEnabled){
-        devButton.innerHTML = "Devmode enabled";
-        devButton.style.color = "green";
+    if (devModeEnabled == false){
+        document.getElementById("devTools").style.display = "block";
         devModeEnabled = true;
-    }
+        return("DevMode enabled");
+    } else {
+        document.getElementById("devTools").style.display = "none";
+        devModeEnabled = false;
+        return("DevMode disabled");
+    } 
+}
+
+const stopAnimation = () => {
     for (let i = 0; i < buttons.length; i++){
         buttons[i].stop();
         clearInterval(intervalPlayId);
