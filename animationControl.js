@@ -92,22 +92,21 @@ const getItemsAsIds = () => {
  
 //launch function
 
-const launch = fadeException => {   
-    fadeException = document.getElementById(fadeException);
-    items = getItemsAsIds();
-    items.forEach(element => {
-        if (element != fadeException) {
-            $(element).animate({ opacity: 0 })
-        }
-    })
-    setTimeout(() => {
-        //Set link dynemically somehow here...
-        window.location.href = "empty.html";
-      }, 500)
+const launch = fadeException => {  
+    if (devModeEnabled == false) {
+        fadeException = document.getElementById(fadeException);
+        items = getItemsAsIds();
+        items.forEach(element => {
+            if (element != fadeException) {
+                $(element).animate({ opacity: 0 })
+            }
+        })
+        setTimeout(() => {
+            //Set link dynemically somehow here...
+            window.location.href = "empty.html";
+        }, 500)
+    }
 }
-
-
-
 
 $( document ).ready(function() {
     buttons = document.getElementsByClassName("animBox");
