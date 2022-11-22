@@ -100,7 +100,7 @@
     100% { opacity: 1; }
   }
 
-@media only screen (max-width: 640px){
+@media only screen and (max-width: 896px){
     body {
         background-color: red;
     }
