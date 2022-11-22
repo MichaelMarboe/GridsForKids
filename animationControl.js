@@ -46,6 +46,13 @@ const stopAnimation = () => {
     }
 }
 
+const pauseAnimation = () => {
+    for (let i = 0; i < buttons.length; i++){
+        buttons[i].pause();
+        clearInterval(intervalPlayId);
+    }
+}
+
 const playOnClick = event => {
     event.target.stop();
     event.target.play();
@@ -99,9 +106,15 @@ const getItemsAsIds = () => {
     return holder;
 }
  
-//launch function
+/* --- LAUNCH ---
+
+1. Pauses animation (just because it looks sweet) and fades every grid element out except the one the user clicked (variable fadeException is passed in by the grid elements onclick). 
+2. Then, redirects user to another page with a delay of 1 second so fading can complete before redirect occurs.
+
+*/
 
 const launch = fadeException => {  
+    pauseAnimation();
     if (devModeEnabled == false) {
         fadeException = document.getElementById(fadeException);
         items = getItemsAsIds();
@@ -113,7 +126,7 @@ const launch = fadeException => {
         setTimeout(() => {
             //Set link dynemically somehow here...
             window.location.href = "empty.html";
-        }, 500)
+        }, 1000)
     }
 }
 
