@@ -6,7 +6,7 @@
 }
 
 #container{
-    max-width:900px;
+    max-width:100%;
 }
 
 .devControls{
@@ -95,16 +95,6 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
         grid-gap:0px;
-        /* grid-gap:0.5%; */
-        /* Virker... ingen underlig stretching
-        ser ud som om det virker så længe procentsatserne går op i 100
-        grid-template-columns: 200px 200px 200px 200px;
-        grid-template-rows: 200px 200px 200px 200px;
-        */
-        
-    }
-    body {
-        background-color: lightblue;
     }
 
     #item1 {
@@ -182,16 +172,6 @@
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 25% 25% 25% 25%;
         grid-gap:0px;
-        /* grid-gap:0.5%; */
-        /* Virker... ingen underlig stretching
-        ser ud som om det virker så længe procentsatserne går op i 100
-        grid-template-columns: 200px 200px 200px 200px;
-        grid-template-rows: 200px 200px 200px 200px;
-        */
-    }
-
-    body {
-        background-color: lightgreen;
     }
 
     #item1{
