@@ -37,6 +37,10 @@
 
 /* --- COLORS --- */
 
+.gray{
+    background-color: gray;
+}
+
 .blue{
     background-color: #45aaf2;
 }
@@ -65,24 +69,6 @@
     background-color: #778CA3;
 }
 
-/* 300 x 225 */
-#container{
-    width:100%;
-    height:auto;
-    display:grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-gap:0px;
-    /* grid-gap:0.5%; */
-    /* Virker... ingen underlig stretching
-    ser ud som om det virker så længe procentsatserne går op i 100
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px 200px;
-    */
-    
-}
-
-
 /* Just for Safari - prevents odd stretching when gap is enabled */
 .container-child {
     height:100%;
@@ -100,94 +86,192 @@
     100% { opacity: 1; }
   }
 
-@media only screen and (max-width: 896px){
+@media only screen and (max-width: 640px){
+    /* 300 x 225 */
+    #container{
+        width:100%;
+        height:auto;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap:0px;
+        /* grid-gap:0.5%; */
+        /* Virker... ingen underlig stretching
+        ser ud som om det virker så længe procentsatserne går op i 100
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px 200px;
+        */
+        
+    }
     body {
-        background-color: red;
+        background-color: lightblue;
+    }
+
+    #item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    #item2 {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    #item3 {
+        display:none;
+    }
+
+    #item4 {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    #item5 {
+        display:none;
+    }
+
+    #item6 {
+       grid-column-start: 3;
+       grid-column-end: 3;
+       grid-row-start:3;
+       grid-row-end: 3;
+    }
+
+    #item7 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    #item8 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    #item9 {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    #item10 {
+        display:none;
+    }
+
+    #item11 {
+        display:none;
     }
 }
 
-@media only screen and (min-width: 1024px){
-    body {
-        background-color: green;
+@media only screen and (min-width: 641px){
+    /* 300 x 225 */
+    #container{
+        width:100%;
+        height:auto;
+        display:grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-gap:0px;
+        /* grid-gap:0.5%; */
+        /* Virker... ingen underlig stretching
+        ser ud som om det virker så længe procentsatserne går op i 100
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px 200px;
+        */
     }
-}
-#item1{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
 
-    /* Centered background image can be added like this:
-    background-image: url("/Backgrounds/dyr-bg.png");
-    background-size: contain; */
-}   
+    body {
+        background-color: lightgreen;
+    }
 
-#item2{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-#item3{
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-
-#item4{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
-
-#item5{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-}
-
-#item6{
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
-}
-
-#item7{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 5;
-}
-
-#item8{
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 3;
-}
-
-#item9{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 4;
-    grid-row-end: 4;
-}
-
-#item10{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 4;
-}
-
-#item11{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 4;
+    #item1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    
+        /* Centered background image can be added like this:
+        background-image: url("/Backgrounds/dyr-bg.png");
+        background-size: contain; */
+    }   
+    
+    #item2{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    
+    #item3{
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    #item4{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    
+    #item5{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    #item6{
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    #item7{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+    
+    #item8{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    
+    #item9{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    
+    #item10{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    
+    #item11{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
 }
