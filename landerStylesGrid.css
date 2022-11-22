@@ -14,12 +14,13 @@
     display:inline-block;
 }
 
-#devButton{
+.devButton{
     width:200px;
     height:100px;
     background-color: #45aaf2;
     color:white;
     margin:5px;
+    cursor: pointer;
 }
 
 #devTools{
@@ -30,7 +31,7 @@
     color:white;
 }
 
-#devButton:hover{
+.devButton:hover{
     opacity:0.7;
 }
 
@@ -99,9 +100,9 @@
     grid-row-start: 1;
     grid-row-end: 1;
 
-    /* Centered background image can be added like this: */
+    /* Centered background image can be added like this:
     background-image: url("/Backgrounds/dyr-bg.png");
-    background-size: contain;
+    background-size: contain; */
 }   
 
 #item2{

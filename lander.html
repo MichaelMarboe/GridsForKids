@@ -2,12 +2,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link rel="stylesheet" href="landerStylesGrid.css"/>
-    <script src="landerScript.js" defer></script>
+    <script src="animationControl.js" defer></script>
 </head>
 
 <body>
     <div id="container" class="fade-in">
-        <div id="item1" class="container-child dyr">
+        <div id="item1" onclick="launch('item1')" class="container-child dyr">
             <lottie-player class="animBox green" src="dyr_knap/dyr_max.json"  background="transparent"  speed="1"></lottie-player>
         </div>
 
@@ -54,6 +54,7 @@
     </div>
 
     <div class="container" id="devTools">
-        <button id="devButton" class="devControls" onclick="toggleDevMode()">DevMode disabled</button>
+        <button id="devModeButton" class="devControls devButton" onclick="toggleDevMode()">DevMode disabled</button>
+        <button class="devControls devButton" onclick="gapToggler()">Toggle grid</button>
     </div>
 </body>
