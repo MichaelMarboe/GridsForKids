@@ -24,7 +24,7 @@ let intervalPlayId;
 let devModeEnabled = false;
 let devButton = document.getElementById("devModeButton");
 
-// Call me from browser console
+// evoke from browser console
 const toggleDevMode = () => {
     if (devModeEnabled == false){
         document.getElementById("devTools").style.display = "block";
@@ -38,19 +38,30 @@ const toggleDevMode = () => {
 }
 
 // Stops all animations and enables playOnClick function to be possible on each animation
-const stopAnimation = () => {
+let clickToPlayEnabled = false;
+const enableClickToPlay = () => {
+    clearInterval(intervalPlayId);
+    /* --- DEBUGGED --- 
+    
+    1. Can't execute onclick function from lottieplayer element if container divs (id item + number) have onclick functions (they somehow block it)
+    2. Solution: Get all container divs and remove onclick attribute from them. While loop because more may be added in the future so it's uknown how many iterations it needs.
+
+    */
+
+    let i = 1;
+    holder = getItemsAsIds();
+    holder.forEach(element => {
+        element.removeAttribute("onclick");
+        // Enable play on "empty" class elements (animations that can't be clicked but just decorate)
+        element.style.pointerEvents = "all";
+    })
+
+    // Stop and reset all animations and append playOnClick function
     for (let i = 0; i < buttons.length; i++){
         buttons[i].stop();
-        clearInterval(intervalPlayId);
         buttons[i].setAttribute("onclick", "playOnClick(event)");
     }
-}
-
-const pauseAnimation = () => {
-    for (let i = 0; i < buttons.length; i++){
-        buttons[i].pause();
-        clearInterval(intervalPlayId);
-    }
+    return console.log("playOnClick events added to player elements.")
 }
 
 const playOnClick = event => {
@@ -85,7 +96,7 @@ const triggerPlay = (seed, delay) => {
 let gapEnabled = false;
 const gapToggler = () => {
     if (!gapEnabled) {
-        document.getElementById("container").style.gap = "4px";
+        document.getElementById("container").style.gap = "2px";
         gapEnabled = true;
     } else {
         document.getElementById("container").style.gap = "0px";
@@ -119,6 +130,8 @@ const launch = fadeException => {
         fadeException = document.getElementById(fadeException);
         items = getItemsAsIds();
         items.forEach(element => {
+            // prevent additional clicks/calls to launch()
+            element.style.pointerEvents = "none";
             if (element != fadeException) {
                 $(element).animate({ opacity: 0 })
             }
@@ -129,6 +142,15 @@ const launch = fadeException => {
         }, 1000)
     }
 }
+
+const pauseAnimation = () => {
+    for (let i = 0; i < buttons.length; i++){
+        buttons[i].pause();
+        clearInterval(intervalPlayId);
+    }
+}
+
+/* --- RUNTIME --- */
 
 $( document ).ready(function() {
     buttons = document.getElementsByClassName("animBox");

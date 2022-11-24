@@ -76,10 +76,14 @@
 
 .container-child:hover{
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.6;
 }
 
 .fade-in { animation: fadeIn 2s; }
+
+.empty{
+    pointer-events: none;
+}
 
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -123,7 +127,10 @@
     }
 
     #item5 {
-        display:none;
+        grid-column-start:3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end:5;
     }
 
     #item6 {
@@ -148,10 +155,7 @@
     }
 
     #item9 {
-        grid-column-start: 3;
-        grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        display:none;
     }
 
     #item10 {
