@@ -127,10 +127,10 @@
     }
 
     #item5 {
-        grid-column-start:3;
+        grid-column-start: 3;
         grid-column-end: 3;
         grid-row-start: 4;
-        grid-row-end:5;
+        grid-row-end: 4;
     }
 
     #item6 {
@@ -155,15 +155,17 @@
     }
 
     #item9 {
-        display:none;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 5;
+        grid-row-end: 5;
     }
 
     #item10 {
-        display:none;
-    }
-
-    #item11 {
-        display:none;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 5;
     }
 }
 
@@ -247,15 +249,9 @@
     
     #item10{
         grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 4;
-    }
-    
-    #item11{
-        grid-column-start: 4;
         grid-column-end: 5;
         grid-row-start: 4;
         grid-row-end: 4;
     }
+
 }
