@@ -37,8 +37,11 @@
 
 /* --- COLORS --- */
 
+
+/* Scheme 1 */
+
 .gray{
-    background-color: gray;
+    background-color: #34495e;
 }
 
 .blue{
@@ -67,6 +70,36 @@
 
 .bluegray{
     background-color: #778CA3;
+}
+
+/* Scheme 2 */
+
+.blue2{
+    background-color: #4b7bec;
+}
+
+.green2{
+    background-color: #26de81;
+}
+
+.red2{
+    background-color: #eb3b5a;
+}
+
+.purple2{
+    background-color: #a55eea;
+}
+
+.turquoise2{
+    background-color: #2bcbba;
+}
+
+.orange2{
+    background-color: #fa8231;
+}
+
+.grey2{
+    background-color: #778ca3;
 }
 
 /* Just for Safari - prevents odd stretching when gap is enabled */

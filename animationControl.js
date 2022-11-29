@@ -96,7 +96,7 @@ const triggerPlay = (seed, delay) => {
 let gapEnabled = false;
 const gapToggler = () => {
     if (!gapEnabled) {
-        document.getElementById("container").style.gap = "2px";
+        document.getElementById("container").style.gap = "3px";
         gapEnabled = true;
     } else {
         document.getElementById("container").style.gap = "0px";
