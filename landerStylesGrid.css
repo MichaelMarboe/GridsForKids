@@ -9,6 +9,7 @@
     max-width:900px;
     border-radius:15px;
     overflow:hidden;    
+    background-color: white;
 }
 
 .devControls{
@@ -115,8 +116,6 @@
 
 .container-child:hover{
     cursor: pointer;
-    opacity: 0.6;
-    filter: brightness(1.75);
 }
 
 .fade-in { animation: fadeIn 2s; }
