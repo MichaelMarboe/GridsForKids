@@ -72,6 +72,7 @@ const playOnClick = event => {
 /* --- HELPER FUNCTIONS ---
     getRandomNumber: Returns one random number that can't be the same as the numbers in forbiddenNumbers array (second argument). Recurses if duplicate found.
     triggerPlay: Triggers play and resets animation ( .stop() ) once full animationPlayTime has been reached.
+    gapToggler: Inserts gap in grid style document. Only used for testing.
 */
 
 const getRandomNumber = (max, forbiddenNumbers) => {

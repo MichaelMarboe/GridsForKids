@@ -7,6 +7,8 @@
 
 #container{
     max-width:900px;
+    border-radius:15px;
+    overflow:hidden;    
 }
 
 .devControls{
@@ -102,6 +104,10 @@
     background-color: #778ca3;
 }
 
+.nullgrey{
+    background-color: #ecf0f1;
+}
+
 /* Just for Safari - prevents odd stretching when gap is enabled */
 .container-child {
     height:100%;
@@ -110,6 +116,7 @@
 .container-child:hover{
     cursor: pointer;
     opacity: 0.6;
+    filter: brightness(1.75);
 }
 
 .fade-in { animation: fadeIn 2s; }
@@ -131,7 +138,7 @@
         display:grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-gap:3px;
+        grid-gap:0px;
     }
 
     #item1 {
@@ -210,7 +217,7 @@
         display:grid;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 25% 25% 25% 25%;
-        grid-gap:3px;
+        grid-gap:0px;
     }
 
     #item1{
